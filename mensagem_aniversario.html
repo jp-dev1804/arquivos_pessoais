@@ -1,0 +1,308 @@
+<touch index.html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Feliz Aniversário, Jhennifer! 🎂</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #08001a;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #ff4d8d;
+            font-size: 38px;
+            text-shadow:
+                3px 3px 0 #8b1450,
+                0 0 15px #ff4d8d;
+            margin-bottom: 10px;
+        }
+
+        .mensagem {
+            max-width: 600px;
+            margin: auto;
+            font-size: 19px;
+            line-height: 1.6;
+            background: rgba(255, 255, 255, 0.08);
+            border: 3px solid #ff4d8d;
+            border-radius: 15px;
+            padding: 18px;
+            box-shadow: 0 0 20px #ff4d8d;
+        }
+
+        /* BOLO PIXELADO */
+
+        .bolo {
+            margin: 35px auto 25px;
+            width: 220px;
+            height: 170px;
+            position: relative;
+            image-rendering: pixelated;
+        }
+
+        .bolo-topo {
+            position: absolute;
+            top: 55px;
+            left: 20px;
+            width: 180px;
+            height: 35px;
+            background: #ffb6d5;
+            border: 8px solid #ff4d8d;
+            box-shadow: 8px 8px 0 #8b1450;
+        }
+
+        .bolo-corpo {
+            position: absolute;
+            top: 90px;
+            left: 30px;
+            width: 160px;
+            height: 65px;
+            background: #9b4dff;
+            border: 8px solid #5d219e;
+            box-shadow: 8px 8px 0 #35115e;
+        }
+
+        .bolo-corpo::before,
+        .bolo-corpo::after {
+            content: "■";
+            position: absolute;
+            color: #ffb6d5;
+            font-size: 25px;
+        }
+
+        .bolo-corpo::before {
+            left: 25px;
+            top: 15px;
+        }
+
+        .bolo-corpo::after {
+            right: 25px;
+            top: 15px;
+        }
+
+        .cobertura {
+            position: absolute;
+            top: 77px;
+            left: 35px;
+            width: 150px;
+            height: 20px;
+            background: #fff;
+            border-left: 8px solid #ffb6d5;
+            border-right: 8px solid #ffb6d5;
+        }
+
+        /* VELAS */
+
+        .vela {
+            position: absolute;
+            top: 15px;
+            width: 14px;
+            height: 45px;
+            background: #fff;
+            border: 4px solid #ff4d8d;
+        }
+
+        .vela1 {
+            left: 65px;
+        }
+
+        .vela2 {
+            left: 103px;
+        }
+
+        .vela3 {
+            left: 141px;
+        }
+
+        .chama {
+            position: absolute;
+            top: -25px;
+            left: -2px;
+            color: #ffd83d;
+            font-size: 24px;
+            animation: chama 0.5s infinite alternate;
+        }
+
+        @keyframes chama {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.3);
+            }
+        }
+
+        /* FOGOS */
+
+        .fogos {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .fogo {
+            position: absolute;
+            font-size: 45px;
+            animation: explodir 2s infinite;
+        }
+
+        .fogo1 {
+            top: 10%;
+            left: 8%;
+        }
+
+        .fogo2 {
+            top: 18%;
+            right: 10%;
+            animation-delay: .7s;
+        }
+
+        .fogo3 {
+            bottom: 15%;
+            left: 12%;
+            animation-delay: 1.2s;
+        }
+
+        .fogo4 {
+            bottom: 20%;
+            right: 12%;
+            animation-delay: 1.7s;
+        }
+
+        @keyframes explodir {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            30% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            70% {
+                transform: scale(1.3);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1.6);
+                opacity: 0;
+            }
+        }
+
+        .coracoes {
+            font-size: 25px;
+            margin-top: 15px;
+            animation: pulsar 1s infinite alternate;
+        }
+
+        @keyframes pulsar {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.15);
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 29px;
+            }
+
+            .mensagem {
+                font-size: 16px;
+            }
+
+            .fogo {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- FOGOS DE ARTIFÍCIO -->
+    <div class="fogos">
+        <div class="fogo fogo1">🎆</div>
+        <div class="fogo fogo2">🎇</div>
+        <div class="fogo fogo3">✨</div>
+        <div class="fogo fogo4">🎆</div>
+    </div>
+
+    <div class="container">
+
+        <h1>🎉 Feliz Aniversário! 🎉</h1>
+
+        <!-- BOLO PIXELADO -->
+        <div class="bolo">
+
+            <div class="vela vela1">
+                <span class="chama">🔥</span>
+            </div>
+
+            <div class="vela vela2">
+                <span class="chama">🔥</span>
+            </div>
+
+            <div class="vela vela3">
+                <span class="chama">🔥</span>
+            </div>
+
+            <div class="bolo-topo"></div>
+            <div class="cobertura"></div>
+            <div class="bolo-corpo"></div>
+
+        </div>
+
+        <div class="mensagem">
+            <strong>Jhennifer! 💗</strong>
+            <br><br>
+
+            Que seu dia seja muito especial e cheio de momentos bons!
+            Desejo muita felicidade, saúde, paz e que você consiga
+            realizar todos os seus sonhos.
+            <br><br>
+
+            Que esse novo ciclo venha com muitas coisas boas e
+            pessoas especiais ao seu lado.
+            <br><br>
+
+            <strong>Aproveite seu dia! 🎂🎉</strong>
+        </div>
+
+        <div class="coracoes">
+            ❤️ 💕 💖 💕 ❤️
+        </div>
+
+    </div>
+
+</body>
+</html>
